@@ -459,7 +459,7 @@ typedef NS_ENUM (NSUInteger, OptimizelyRunningMode) {
  *  @param key The Optimizely key associated with the code block you want to watch
  *  @param callback The callback method that will be invoked whenever the code block is changed.
  */
-+ (void)registerCallbackForCodeBlockWithKey:(OptimizelyCodeBlocksKey *)key callback:(void (^)())callback;
++ (void)registerCallbackForCodeBlockWithKey:(OptimizelyCodeBlocksKey *)key callback:(void (^)(void))callback;
 
 /* Should not be called directly.  These methods register a key with the editor in edit mode. */
 + (void)preregisterVariableKey:(OptimizelyVariableKey *)key;
